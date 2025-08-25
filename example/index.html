@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Современный Лендинг</title>
+    <style>
+      :root {
+        --primary: #4f46e5; /* фиолетовый */
+        --secondary: #6366f1;
+        --light: #f9fafb;
+        --dark: #1f2937;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        color: var(--dark);
+        background: var(--light);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      header .btn {
+        background: white;
+        color: var(--primary);
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+
+      header .btn:hover {
+        background: #f0f0f0;
+      }
+
+      section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--primary);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .feature {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .feature:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature span {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      form {
+        max-width: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      form input,
+      form button {
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+
+      form button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      form button:hover {
+        background: var(--secondary);
+      }
+
+      footer {
+        background: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero -->
+    <header>
+      <h1>Создаём сайты, которые продают</h1>
+      <p>Лендинг для вашего бизнеса за 3 дня</p>
+      <button class="btn">Оставить заявку</button>
+    </header>
+
+    <!-- Features -->
+    <section>
+      <h2>Почему выбирают нас?</h2>
+      <div class="features">
+        <div class="feature"><span>⚡</span> Быстрая работа</div>
+        <div class="feature"><span>🎨</span> Современный дизайн</div>
+        <div class="feature"><span>📱</span> Адаптив под телефон</div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section>
+      <h2>Что мы предлагаем</h2>
+      <p>
+        Мы создаём одностраничные сайты (лендинги), которые помогают малому
+        бизнесу находить клиентов онлайн. Удобный дизайн, простая структура и
+        высокая скорость загрузки — всё, чтобы ваши клиенты оставались с вами.
+      </p>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+      <h2>Отзывы клиентов</h2>
+      <p>
+        «Сайт сделали всего за 2 дня, теперь клиенты записываются прямо через
+        форму. Очень доволен!» – Иван
+      </p>
+      <p>«Красиво, удобно и работает без проблем. Спасибо!» – Мария</p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Оставьте заявку</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="email" placeholder="Ваш Email" required />
+        <button type="submit">Отправить</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Ваш бренд. Все права защищены.</p>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        msg.textContent = "✅ Спасибо! Ваша заявка отправлена.";
+        msg.style.color = "green";
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
