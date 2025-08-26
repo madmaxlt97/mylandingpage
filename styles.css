@@ -69,9 +69,12 @@ html {
 
 .service {
   padding: 5rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 .benefits {
   padding: 1rem 1rem;
+  margin-top: 0;
 }
 
 .service h3,
